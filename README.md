@@ -1,3 +1,3 @@
-# SquareOne
+# PhyGi
 
-Starting point for React projects!
+Giphy picker for React
