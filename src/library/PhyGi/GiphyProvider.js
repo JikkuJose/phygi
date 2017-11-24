@@ -34,9 +34,18 @@ class GiphyProvider extends React.Component {
     return this.state.response
   }
 
+  onKeyDown = event => {
+    event.persist()
+    if (event.keyCode === 13) {
+      this.fetchSearch()
+    }
+  }
+
   onChange = event => {
     event.persist()
-    this.setState(s => ({ query: event.target.value }))
+    const query = event.target.value
+
+    this.setState(s => ({ query }))
   }
 
   render() {
@@ -47,6 +56,7 @@ class GiphyProvider extends React.Component {
       gifs: this.gifs(),
       query,
       onChange: this.onChange,
+      onKeyDown: this.onKeyDown,
     })
   }
 }

@@ -11,7 +11,7 @@ export default class PhyGi extends React.Component {
 
     return (
       <GiphyProvider
-        render={({ query, gifs, onChange }) => {
+        render={({ query, gifs, onChange, onKeyDown }) => {
           return (
             <div className="bg-white w5 br3 ba b--black-20 popout1">
               <div className="pa1 pb0">
@@ -20,6 +20,7 @@ export default class PhyGi extends React.Component {
                   value={query}
                   placeholder="Search"
                   onChange={onChange}
+                  onKeyDown={onKeyDown}
                   className="w-100 sans-serif black-80 outline-0 br4 ba b--black-30 pa1 ph2"
                 />
               </div>
