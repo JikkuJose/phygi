@@ -1,13 +1,21 @@
 .popout1 {
-  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.2);
 }
 
 .popout2 {
-  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.15rem 0.15rem 0 rgba(0, 0, 0, 0.4);
 }
 
 .popout3 {
-  box-shadow: 0 6px 40px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.5);
+}
+
+.inset1 {
+  box-shadow: inset 0 0 0.05rem rgba(0, 0, 0, 0.5);
+}
+
+.inset2 {
+  box-shadow: inset 0 0 0.2rem rgba(0, 0, 0, 0.5);
 }
 
 .ca {
@@ -51,4 +59,74 @@
 
 .not-allowed {
   cursor: not-allowed;
+}
+
+.sb_track-white-20::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.20);
+}
+
+.sb_thumb-white-20::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.20);
+}
+
+.sb_track-white-10::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.10);
+}
+
+.sb_thumb-white-10::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.10);
+}
+
+.sb_track-black-20::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.20);
+}
+
+.sb_thumb-black-20::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.20);
+}
+
+.sb_track-black-10::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.10);
+}
+
+.sb_thumb-black-10::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.10);
+}
+
+.sb-reset::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+.sb-wide::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.sb-very-thin::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+.sb-thin::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.sb-br1::-webkit-scrollbar-track,
+.sb-br1::-webkit-scrollbar-thumb {
+  border-radius: 0.125rem;
+}
+
+.sb-br2::-webkit-scrollbar-track,
+.sb-br2::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
+}
+
+.sb-br2::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
+}
+
+.sb-br3::-webkit-scrollbar-track {
+  border-radius: 0.5rem;
+}
+
+.sb-br3::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
 }
