@@ -3,6 +3,10 @@ import PropTypes from "prop-types"
 
 import Giphy from "./Giphy"
 
+const KEYCODES = {
+  enter: 13,
+}
+
 class GiphyProvider extends React.Component {
   constructor(props) {
     super(props)
@@ -36,7 +40,7 @@ class GiphyProvider extends React.Component {
 
   onKeyDown = event => {
     event.persist()
-    if (event.keyCode === 13) {
+    if (event.keyCode === KEYCODES["enter"]) {
       this.fetchSearch()
     }
   }
