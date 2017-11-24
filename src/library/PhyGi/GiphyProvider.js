@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import Giphy from "./Giphy"
 
-class GiphyAPI extends React.Component {
+class GiphyProvider extends React.Component {
   constructor(props) {
     super(props)
 
@@ -47,14 +47,13 @@ class GiphyAPI extends React.Component {
       gifs: this.gifs(),
       query,
       onChange: this.onChange,
-      onSelect: this.onSelect,
     })
   }
 }
 
-export default GiphyAPI
+export default GiphyProvider
 
-GiphyAPI.propTypes = {
+GiphyProvider.propTypes = {
   query: PropTypes.string,
   rating: PropTypes.string,
   lang: PropTypes.string,
@@ -62,7 +61,7 @@ GiphyAPI.propTypes = {
   limit: PropTypes.number,
 }
 
-GiphyAPI.defaultProps = {
+GiphyProvider.defaultProps = {
   query: "",
   rating: "G",
   lang: "en",
@@ -71,6 +70,5 @@ GiphyAPI.defaultProps = {
 }
 
 export function extract(response, type) {
-  console.log(response.data)
-  return response.data.map(gif => gif.images[type])
+  return response.data.map(gif => ({ id: gif.id, url: gif.images[type].url }))
 }
