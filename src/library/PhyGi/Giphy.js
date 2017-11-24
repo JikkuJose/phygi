@@ -7,7 +7,7 @@ const ENDPOINTS = {
 
 const DEFAULT_CONFIG = {
   apiKey: "DwqHQOlTsRcoyeEJOGEwbtZ7uV9myb85",
-  limit: 6,
+  limit: 12,
   lang: "en",
   offset: 0,
   rating: "G",
