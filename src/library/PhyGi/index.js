@@ -5,6 +5,8 @@ import PropTypes from "prop-types"
 import ScrollArea from "core/ScrollArea"
 import GiphyProvider, { extract } from "./GiphyProvider"
 
+import { Gif } from "./Gif"
+
 export default class PhyGi extends React.Component {
   render() {
     const { onSelect } = this.props
@@ -33,7 +35,7 @@ export default class PhyGi extends React.Component {
               >
                 <Gifs>
                   {gifs &&
-                    extract(gifs, "fixed_height_small").map((gif, i) => (
+                    extract(gifs, "fixed_width").map((gif, i) => (
                       <Gif url={gif.url} onClick={onSelect(gif.id)} key={i} />
                     ))}
                 </Gifs>
@@ -53,20 +55,6 @@ PhyGi.defaultProps = {
 PhyGi.propTypes = {
   onSelect: PropTypes.func,
 }
-
-const gutter = 0.232
-
-const Gif = styled.div.attrs({
-  className: "pointer",
-})`
-  margin-right: ${gutter}rem;
-  margin-bottom: ${gutter}rem;
-  width: 100%;
-  height: 4.8rem;
-  background: url(${p => p.url});
-  background-size: cover;
-  background-repeat: no-repeat;
-`
 
 const Gifs = styled.div.attrs({
   className: "flex flex-wrap",
